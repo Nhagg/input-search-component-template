@@ -4,3 +4,43 @@
 html{
     font-size: 16px;
 }
+$searchBoxWidth: 300px;
+.search {
+    &__input {
+        padding: 8px;
+        border-radius: 4px;
+        width: $searchBoxWidth;
+    }
+    &__result {
+        margin-top: 8px;
+        border: solid 1px #ddd;
+        border-radius: 4px;
+        position: relative;
+        min-height: 80px;
+        max-height: 500px;
+        width: $searchBoxWidth;
+        max-width: $searchBoxWidth;
+        overflow: auto;
+    }
+    &__no-result {
+        padding: 12px 8px;
+        text-align: center;
+        color: #333;
+    }
+    &__error-message {
+        padding: 12px 8px;
+        color: red;
+    }
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    &__item {
+        padding: 12px 20px;
+        cursor: pointer;
+        &:hover {
+            background-color: #f9f9f9;
+        }
+    }
+}
